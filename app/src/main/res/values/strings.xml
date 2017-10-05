@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Zara-Queue</string>
     <string name="action_settings">Settings</string>
+    <string name="disponible">El tiempo de espera actual es</string>
+    <string name="acude">ACUDE AL PROBADOR</string>
+    <string name="acude_msg">Ya tenemos un probador libre para ti. ¡Ven cuanto antes!</string>
+    <string name="timeover_title">TU TURNO HA CADUCADO</string>
+    <string name="timeover_subtitle">Si necesitas más tiempo para llegar al probador puedes renovar tu turno.</string>
+    <string name="availability_title">PROBADOR RESERVADO</string>
 </resources>
