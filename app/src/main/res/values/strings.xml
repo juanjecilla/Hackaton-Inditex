@@ -7,4 +7,5 @@
     <string name="timeover_title">TU TURNO HA CADUCADO</string>
     <string name="timeover_subtitle">Si necesitas más tiempo para llegar al probador puedes renovar tu turno.</string>
     <string name="availability_title">PROBADOR RESERVADO</string>
+    <string name="title_activity_manage">ManageActivity</string>
 </resources>
