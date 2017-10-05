@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="30px"
-    tools:context="com.monoloco.zaraqueue.ManageActivityFragment"
-    >
+    tools:context="com.monoloco.zaraqueue.ManageActivityFragment">
 
 
     <LinearLayout
@@ -15,111 +23,20 @@
         android:orientation="vertical"
         android:padding="30dp">
 
-        <TextView
-            android:id="@+id/username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="0dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center_horizontal"
-            android:text="PROBADORES"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="45sp"
-            />
-        <TextView
-            android:id="@+id/storecode"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="ZARA TRF C/Preciados"/>
-
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:columnCount="5">
-
-
-            <TextView
-                android:id="@+id/cabin01"
-                android:layout_width="@dimen/circle"
-                android:layout_height="@dimen/circle"
-                android:background="@drawable/circle"
-                android:gravity="center"
-                android:margin="10dp"
-                android:text="01"
-                android:textColor="@color/colorPrimary"/>
-            <TextView
-                android:id="@+id/cabin02"
-                android:layout_width="@dimen/circle"
-                android:layout_height="@dimen/circle"
-                android:background="@drawable/circle"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="02"
-                android:textColor="@color/colorPrimary"/>
-            <TextView
-                android:id="@+id/cabin03"
-                android:layout_width="@dimen/circle"
-                android:layout_height="@dimen/circle"
-                android:background="@drawable/circle"
-                android:gravity="center"
-                android:text="03"
-                android:textColor="@color/colorPrimary"/>
-            <TextView
-                android:id="@+id/cabin04"
-                android:layout_width="@dimen/circle"
-                android:layout_height="@dimen/circle"
-                android:background="@drawable/circle"
-                android:gravity="center"
-                android:text="03"
-                android:textColor="@color/colorPrimary"/>
-            <TextView
-                android:id="@+id/cabin05"
-                android:layout_width="@dimen/circle"
-                android:layout_height="@dimen/circle"
-                android:background="@drawable/circle"
-                android:backgroundTint="@color/colorPrimaryDark"
-                android:gravity="center"
-                android:text="04"
-                android:textColor="@color/colorPrimary"/>
-
-
-        </GridLayout>
-
-
 
         <TextView
-            android:id="@+id/userstatus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:gravity="center_horizontal"
-            android:text="Turno confirmado"
+            android:text="Clientes en llamada"
             android:textStyle="bold"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="16sp"/>
-        <TextView
-            android:id="@+id/usertime"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center_horizontal"
-            android:text="Tiempo previsto en probador 8 min"
 
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="16sp"/>
-        <Button
-            android:id="@+id/checkin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10px"
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:text="ASIGNAR PROBADOR"
-            android:textColor="@color/colorPrimary"/>
+        //Cola llamada
 
-
+        <include layout="@layout/clientcalllist_item" />
+        <include layout="@layout/clientcalllist_item" />
 
 
         <View
@@ -131,150 +48,23 @@
             />
 
         <TextView
-            android:id="@+id/numberofitems"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="2 prendas"
+
+            android:text="Clientes en espera"
             android:textStyle="bold"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="16sp"/>
 
-        //Prendas
-
-        <FrameLayout
-            android:id="@+id/clothesitem01"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_gravity="top"
-            android:layout_marginTop="20dp">
-
-            <ImageView
-                android:id="@+id/item_image01"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top|left"
-                android:layout_weight="1"
-                android:src="@drawable/img_manage_item01" />
-
-            <TextView
-                android:id="@+id/eliminateitem"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|right"
-                android:layout_marginTop="5dp"
-                android:text="Eliminar"
-                android:textSize="12sp" />
 
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginLeft="70dp"
-                android:orientation="vertical">
+        //Cola en espera
 
-                <TextView
-                    android:id="@+id/item_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="CAMISETA BASIC CONTRASTE"
-                    android:textSize="18sp"
-                    android:textColor="@color/colorPrimaryDark"/>
-
-                <TextView
-                    android:id="@+id/item_ref"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:text="Negro - Ref: 1198/210"
-                    android:textSize="16sp" />
-                <TextView
-                    android:id="@+id/item_size"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:text="M"
-                    android:textSize="16sp" />
-            </LinearLayout>
-        </FrameLayout>
-
-        <FrameLayout
-            android:id="@+id/clothesitem01"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_gravity="top"
-            android:layout_marginTop="20dp">
-
-            <ImageView
-                android:id="@+id/item_image01"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top|left"
-                android:layout_weight="1"
-                android:src="@drawable/img_manage_item02" />
-
-            <TextView
-                android:id="@+id/eliminateitem"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|right"
-                android:layout_marginTop="5dp"
-                android:text="Eliminar"
-                android:textSize="12sp" />
+        <include layout="@layout/clientlist_item" />
+        <include layout="@layout/clientlist_item" />
 
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginLeft="70dp"
-                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/item_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="VESTIDO ESTAMPADO GOMA"
-                    android:textSize="18sp"
-                    android:textColor="@color/colorPrimaryDark"/>
-
-                <TextView
-                    android:id="@+id/item_ref"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:text="Negro - Ref: 5580/251"
-                    android:textSize="16sp" />
-                <TextView
-                    android:id="@+id/item_size"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:text="M"
-                    android:textSize="16sp" />
-            </LinearLayout>
-        </FrameLayout>
-
-
-        <Button
-            android:id="@+id/scanclothes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80px"
-            android:layout_marginBottom="60px"
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:layout_gravity="center_horizontal"
-            android:text="ESCANEAR PRENDAS"
-            android:textColor="@color/colorPrimary"/>
 
 
 
@@ -283,3 +73,89 @@
 
 
 </ScrollView>
+        <LinearLayout
+            android:id="@+id/cabinmanager"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/colorPrimary">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="Zara Queue"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/storeaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="CALLE PRECIADOS, 18"
+                android:textColor="@color/colorPrimaryDark"/>
+            <TextView
+                android:id="@+id/storesection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Zara Woman"/>
+
+
+            //Grid de probadores
+            <include layout="@layout/cabingrid_item"/>
+            <TextView
+                android:id="@+id/cabinstatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:gravity="center_horizontal"
+                android:text="3 cabinas libres"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/queuetime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="00:00:00"
+
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/explanation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Tiempo previsto de espera"/>
+
+
+
+
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+    <ImageView
+        android:id="@+id/cabinmanagerbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/ic_menu_02wallet"/>
+    <ImageView
+            android:id="@+id/queuemanagerbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+        android:layout_weight="1"
+            android:src="@drawable/ic_menu_01products"/>
+
+    </LinearLayout>
+</LinearLayout>
