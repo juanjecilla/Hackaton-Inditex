@@ -16,18 +16,41 @@
         android:padding="30dp">
 
         <TextView
+            android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="0dp"
             android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
             android:text="MARIA"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="45sp"
-             />
+            />
         <TextView
+            android:id="@+id/usercode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:text="Cod. 0048"/>
+        <TextView
+            android:id="@+id/userstatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="No está en la cola"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"/>
+        <Button
+            android:id="@+id/addtoqueue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10px"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:text="AÑADIR A LA COLA"
+            android:textColor="@color/colorPrimary"/>
 
 
 
@@ -41,18 +64,27 @@
             />
 
         <TextView
+            android:id="@+id/numberofitems"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="0 prendas"
+            android:gravity="center_horizontal"
+            android:text="No hay prendas"
             android:textStyle="bold"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="16sp"/>
 
+
+
+
         <Button
-            android:layout_width="wrap_content"
+            android:id="@+id/scanclothes"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10px"
+            android:layout_marginBottom="60px"
             android:backgroundTint="@color/colorPrimaryDark"
+            android:layout_gravity="center_horizontal"
             android:text="ESCANEAR PRENDAS"
             android:textColor="@color/colorPrimary"/>
 
