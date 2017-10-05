@@ -143,19 +143,53 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_weight="1"
-        android:orientation="horizontal">
-    <ImageView
+        android:orientation="horizontal"
+        >
+    <FrameLayout
         android:id="@+id/cabinmanagerbutton"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:src="@drawable/ic_menu_02wallet"/>
-    <ImageView
+        android:layout_weight="1">
+        <ImageView
+        android:id="@+id/cabinmanagerbuttonicon"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+
+        android:src="@drawable/ic_manager_cabins"/>
+        <TextView
+            android:id="@+id/cabinmanagerbuttontext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center_horizontal"
+            android:text="PROBADORES"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"/>
+    </FrameLayout>
+        <FrameLayout
             android:id="@+id/queuemanagerbutton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-        android:layout_weight="1"
-            android:src="@drawable/ic_menu_01products"/>
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/queuemanagerbuttonicon"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+
+                android:src="@drawable/ic_manager_queue"/>
+            <TextView
+                android:id="@+id/queuemanagerbuttontext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="center_horizontal"
+                android:text="COLA"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"/>
+        </FrameLayout>
+
 
     </LinearLayout>
 </LinearLayout>
