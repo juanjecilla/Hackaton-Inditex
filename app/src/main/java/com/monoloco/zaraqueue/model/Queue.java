@@ -2,17 +2,22 @@ package com.monoloco.zaraqueue.model;
 
 import java.util.ArrayList;
 
+import io.realm.RealmObject;
+
 /**
  * Created by root on 5/10/17.
  */
 
 public class Queue {
     private String uid;
-    private ArrayList<String> list;
+    private ArrayList<QueueUser> queueList;
 
-    public Queue(String uid, ArrayList<String> list) {
+    public Queue() {
+    }
+
+    public Queue(String uid, ArrayList<QueueUser> queueList) {
         this.uid = uid;
-        this.list = list;
+        this.queueList = queueList;
     }
 
     public String getUid() {
@@ -23,11 +28,11 @@ public class Queue {
         this.uid = uid;
     }
 
-    public ArrayList<String> getList() {
-        return list;
+    public ArrayList<QueueUser> getQueueList() {
+        return queueList;
     }
 
-    public void setList(ArrayList<String> list) {
-        this.list = list;
+    public void setQueueList(ArrayList<QueueUser> queueList) {
+        this.queueList = queueList;
     }
 }

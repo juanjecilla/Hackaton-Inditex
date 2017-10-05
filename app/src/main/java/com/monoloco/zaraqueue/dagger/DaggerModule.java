@@ -4,6 +4,9 @@ import android.content.Context;
 
 import com.monoloco.zaraqueue.ApplicationClass;
 import com.monoloco.zaraqueue.activities.MainActivity;
+import com.monoloco.zaraqueue.firebase.FirebaseManager;
+import com.monoloco.zaraqueue.model.Queue;
+import com.monoloco.zaraqueue.model.QueueUser;
 import com.monoloco.zaraqueue.preferences.PreferencesManager;
 import com.monoloco.zaraqueue.utils.LocalDatabasesUtils;
 import com.monoloco.zaraqueue.utils.Utils;
@@ -27,7 +30,10 @@ import io.realm.Realm;
                         // Utils
                         Utils.class,
                         Utils.class,
-                        LocalDatabasesUtils.class
+                        LocalDatabasesUtils.class,
+
+                        // Firebase
+                        FirebaseManager.class
 
                 },
         library = true,
@@ -66,6 +72,18 @@ public class DaggerModule {
     @Singleton
     LocalDatabasesUtils provideLocalDatabaseUtils(Context context){
         return new LocalDatabasesUtils(context);
+    }
+
+    @Provides
+    @Singleton
+    Queue provideQueue(){
+        return new Queue();
+    }
+
+    @Provides
+    @Singleton
+    QueueUser provideQueueUser(){
+        return new QueueUser();
     }
 
 }

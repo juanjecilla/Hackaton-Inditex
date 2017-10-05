@@ -3,6 +3,8 @@ package com.monoloco.zaraqueue.utils;
 import android.content.Context;
 
 import com.monoloco.zaraqueue.base.BaseUtils;
+import com.monoloco.zaraqueue.model.Queue;
+import com.monoloco.zaraqueue.model.QueueItem;
 
 import javax.inject.Inject;
 
@@ -14,7 +16,6 @@ import io.realm.Realm;
 
 public class LocalDatabasesUtils extends BaseUtils {
 
-    @Inject Realm realm;
 
     private Context context;
 
@@ -25,4 +26,21 @@ public class LocalDatabasesUtils extends BaseUtils {
     public void updateQueue(){
 
     }
+
+    public void addToQueue(QueueItem queueItem) {
+
+    }
+
+    public void removeFromQueue(QueueItem queueItem) {
+
+    }
+
+    private void chechQueueState(){
+
+    }
+
+/*    public Queue getQueue() {
+        Queue queue = realm.where(Queue.class).findFirst();
+        return queue;
+    }*/
 }
