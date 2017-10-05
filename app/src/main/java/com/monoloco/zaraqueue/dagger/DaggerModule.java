@@ -82,6 +82,12 @@ public class DaggerModule {
 
     @Provides
     @Singleton
+    FirebaseManager provideFirebaseManager(Context context){
+        return new FirebaseManager(context);
+    }
+
+    @Provides
+    @Singleton
     QueueUser provideQueueUser(){
         return new QueueUser();
     }

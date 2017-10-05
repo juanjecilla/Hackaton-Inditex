@@ -17,7 +17,7 @@ public class FirebaseMappingUtils extends BaseUtils {
         HashMap<String, Object> clothes = new HashMap<>();
 
         user.put("name", queueUser.getName());
-        user.put("birthdate", queueUser.getBirthdate());
+        user.put("birthdate", queueUser.getAge());
         user.put("gender", queueUser.getGender());
 
         for (Clothes item: queueUser.getClothes()) {
