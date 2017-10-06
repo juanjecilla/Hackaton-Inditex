@@ -59,6 +59,7 @@
                     android:layout_gravity="bottom"
                     android:text="10min"
                     android:textColor="@color/colorAccent"
+                    android:textStyle="bold"
                     android:textSize="14sp" />
 
             </LinearLayout>
