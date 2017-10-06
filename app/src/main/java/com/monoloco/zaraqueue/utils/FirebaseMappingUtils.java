@@ -26,7 +26,7 @@ public class FirebaseMappingUtils extends BaseUtils {
         }
 
         user.put("clothes", clothes);
-        user.put("company", queueUser.isCompany());
+        user.put("company", queueUser.getCompany());
         user.put("estimatedTime", queueUser.getEstimatedTime());
 
         return user;

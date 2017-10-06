@@ -1,27 +1,31 @@
 package com.monoloco.zaraqueue.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.ArrayList;
 
 /**
  * Created by root on 5/10/17.
  */
 
-public class QueueUser {
+public class QueueUser implements Parcelable {
 
     private String uid;
     private String name;
     private int age;
     private int gender;
     private ArrayList<Clothes> clothes;
-    private boolean company;
+    private int company;
     private long estimatedTime;
     private int valid;
     private long timestart;
+    private int ready;
 
     public QueueUser() {
     }
 
-    public QueueUser(String uid, String name, int age, int gender, ArrayList<Clothes> clothes, boolean company, long estimatedTime, int valid, long timestart) {
+    public QueueUser(String uid, String name, int age, int gender, ArrayList<Clothes> clothes, int company, long estimatedTime, int valid, long timestart, int ready) {
         this.uid = uid;
         this.name = name;
         this.age = age;
@@ -31,6 +35,7 @@ public class QueueUser {
         this.estimatedTime = estimatedTime;
         this.valid = valid;
         this.timestart = timestart;
+        this.ready = ready;
     }
 
     public String getUid() {
@@ -73,11 +78,11 @@ public class QueueUser {
         this.clothes = clothes;
     }
 
-    public boolean isCompany() {
+    public int getCompany() {
         return company;
     }
 
-    public void setCompany(boolean company) {
+    public void setCompany(int company) {
         this.company = company;
     }
 
@@ -104,4 +109,56 @@ public class QueueUser {
     public void setTimestart(long timestart) {
         this.timestart = timestart;
     }
+
+    public int getReady() {
+        return ready;
+    }
+
+    public void setReady(int ready) {
+        this.ready = ready;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.uid);
+        dest.writeString(this.name);
+        dest.writeInt(this.age);
+        dest.writeInt(this.gender);
+        dest.writeTypedList(this.clothes);
+        dest.writeInt(this.company);
+        dest.writeLong(this.estimatedTime);
+        dest.writeInt(this.valid);
+        dest.writeLong(this.timestart);
+        dest.writeInt(this.ready);
+    }
+
+    protected QueueUser(Parcel in) {
+        this.uid = in.readString();
+        this.name = in.readString();
+        this.age = in.readInt();
+        this.gender = in.readInt();
+        this.clothes = in.createTypedArrayList(Clothes.CREATOR);
+        this.company = in.readInt();
+        this.estimatedTime = in.readLong();
+        this.valid = in.readInt();
+        this.timestart = in.readLong();
+        this.ready = in.readInt();
+    }
+
+    public static final Creator<QueueUser> CREATOR = new Creator<QueueUser>() {
+        @Override
+        public QueueUser createFromParcel(Parcel source) {
+            return new QueueUser(source);
+        }
+
+        @Override
+        public QueueUser[] newArray(int size) {
+            return new QueueUser[size];
+        }
+    };
 }

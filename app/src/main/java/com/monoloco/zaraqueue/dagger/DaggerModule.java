@@ -3,8 +3,10 @@ package com.monoloco.zaraqueue.dagger;
 import android.content.Context;
 
 import com.monoloco.zaraqueue.ApplicationClass;
-import com.monoloco.zaraqueue.activities.MainActivity;
+import com.monoloco.zaraqueue.activities.ClientActivity;
+import com.monoloco.zaraqueue.activities.ManageActivity;
 import com.monoloco.zaraqueue.firebase.FirebaseManager;
+import com.monoloco.zaraqueue.fragments.NewClientFragment;
 import com.monoloco.zaraqueue.model.Queue;
 import com.monoloco.zaraqueue.model.QueueUser;
 import com.monoloco.zaraqueue.preferences.PreferencesManager;
@@ -25,7 +27,8 @@ import io.realm.Realm;
         injects =
                 {
                         // Activities
-                        MainActivity.class,
+                        ClientActivity.class,
+                        ManageActivity.class,
 
                         // Utils
                         Utils.class,
@@ -33,7 +36,10 @@ import io.realm.Realm;
                         LocalDatabasesUtils.class,
 
                         // Firebase
-                        FirebaseManager.class
+                        FirebaseManager.class,
+
+                        // Fragment
+                        NewClientFragment.class,
 
                 },
         library = true,

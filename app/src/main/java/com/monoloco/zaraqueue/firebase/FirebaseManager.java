@@ -1,7 +1,6 @@
 package com.monoloco.zaraqueue.firebase;
 
 import android.content.Context;
-import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
@@ -55,10 +54,8 @@ public class FirebaseManager implements ChildEventListener {
 
     private void initialize() {
         if (FirebaseAuth.getInstance().getCurrentUser() == null){
-            Log.d("HOLA", "NOAUTH");
             FirebaseAuth.getInstance().signInAnonymously();
         } else {
-            Log.d("HOLA", "AUTH");
             firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         }
 
@@ -83,7 +80,6 @@ public class FirebaseManager implements ChildEventListener {
     }
 
     private void initializeQueue(){
-        Log.d("HOLA", "nnnNULL");
         databaseReference = FirebaseDatabase.getInstance().getReference().child("queues").child("QUEUE_1");
         databaseReference.orderByChild("timestart").addChildEventListener(this);
         databaseReference.orderByChild("timestart").addValueEventListener(valueEventListener);
@@ -110,7 +106,7 @@ public class FirebaseManager implements ChildEventListener {
 
     @Override
     public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-        Log.d("HOLA_A", String.valueOf(dataSnapshot.getValue()));
+        Log.d("CHILD_ADDED", String.valueOf(dataSnapshot.getValue()));
 /*                QueueItem queueItem = dataSnapshot.getValue(QueueItem.class);
                 localDatabasesUtils.addToQueue(queueItem);*/
     }
@@ -122,7 +118,7 @@ public class FirebaseManager implements ChildEventListener {
 
     @Override
     public void onChildRemoved(DataSnapshot dataSnapshot) {
-        Log.d("HOLA_R", String.valueOf(dataSnapshot.getValue()));
+        Log.d("CHILD_REMOVED", String.valueOf(dataSnapshot.getValue()));
 /*                QueueItem queueItem = dataSnapshot.getValue(QueueItem.class);
                 localDatabasesUtils.removeFromQueue(queueItem);*/
     }

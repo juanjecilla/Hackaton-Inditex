@@ -29,7 +29,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends BaseActivity implements OnQueueUpdatedListener{
+public class ClientActivity extends BaseActivity implements OnQueueUpdatedListener{
 
     public static final String MIME_TEXT_PLAIN = "text/plain";
 
@@ -97,11 +97,11 @@ public class MainActivity extends BaseActivity implements OnQueueUpdatedListener
             t.printStackTrace();
         }
 
-        queueUser.setAge(12345678);
-        queueUser.setName("Paquito");
-        queueUser.setCompany(true);
-        queueUser.setEstimatedTime(9853);
-        queueUser.setGender(1);
+        queueUser.setAge(0);
+        queueUser.setName("");
+        queueUser.setCompany(0);
+        queueUser.setEstimatedTime(0);
+        queueUser.setGender(2);
         queueUser.setValid(0);
 
         Clothes clothes1 = new Clothes("123456", 1);
@@ -159,6 +159,12 @@ public class MainActivity extends BaseActivity implements OnQueueUpdatedListener
     public void onQueueUpdated(long timecount, int size) {
         Log.d("QUEUE_SIZE", String.valueOf(size) + "with a time of " + timecount);
         Log.d("QUEUE_IN", String.valueOf(preferencesManager.getIsInQueue()));
+
+        int seconds = (int) (timecount / 1000);
+        int minutes = seconds / 60;
+        seconds = seconds % 60;
+
+        queueTime.setText(String.format("%02d:%02d", minutes, seconds));
     }
 
     @Override

@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="30px"
-    tools:context="com.monoloco.zaraqueue.ManageActivityFragment"
-    >
-
+    tools:context="com.monoloco.zaraqueue.ManageActivityFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,8 +22,8 @@
             android:gravity="center_horizontal"
             android:text="MARIA"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="45sp"
-            />
+            android:textSize="45sp"/>
+
         <TextView
             android:id="@+id/usercode"
             android:layout_width="match_parent"
@@ -53,6 +51,7 @@
             android:textStyle="bold"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="16sp"/>
+
         <TextView
             android:id="@+id/usertime"
             android:layout_width="match_parent"
@@ -60,7 +59,6 @@
             android:layout_marginTop="20dp"
             android:gravity="center_horizontal"
             android:text="Tiempo previsto en probador 8 min"
-
             android:textColor="@color/colorPrimaryDark"
             android:textSize="16sp"/>
 
@@ -77,16 +75,12 @@
             android:text="ASIGNAR PROBADOR"
             android:textColor="@color/colorPrimary"/>
 
-
-
-
         <View
             android:layout_width="40dp"
             android:layout_height="1dp"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="40dp"
-            android:background="@color/colorPrimaryDark"
-            />
+            android:background="@color/colorPrimaryDark"/>
 
         <TextView
             android:id="@+id/numberofitems"
@@ -97,8 +91,6 @@
             android:textStyle="bold"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="16sp"/>
-
-        //Prendas
 
         <FrameLayout
             android:id="@+id/clothesitem01"
@@ -124,7 +116,6 @@
                 android:text="Eliminar"
                 android:textSize="12sp" />
 
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -149,6 +140,7 @@
                     android:maxLines="1"
                     android:text="Negro - Ref: 1198/210"
                     android:textSize="16sp" />
+
                 <TextView
                     android:id="@+id/item_size"
                     android:layout_width="wrap_content"
@@ -158,7 +150,9 @@
                     android:maxLines="1"
                     android:text="M"
                     android:textSize="16sp" />
+
             </LinearLayout>
+
         </FrameLayout>
 
         <FrameLayout
@@ -185,7 +179,6 @@
                 android:text="Eliminar"
                 android:textSize="12sp" />
 
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -210,6 +203,7 @@
                     android:maxLines="1"
                     android:text="Negro - Ref: 5580/251"
                     android:textSize="16sp" />
+
                 <TextView
                     android:id="@+id/item_size"
                     android:layout_width="wrap_content"
@@ -219,9 +213,10 @@
                     android:maxLines="1"
                     android:text="M"
                     android:textSize="16sp" />
-            </LinearLayout>
-        </FrameLayout>
 
+            </LinearLayout>
+
+        </FrameLayout>
 
         <Button
             android:id="@+id/scanclothes"
@@ -234,10 +229,6 @@
             android:text="ESCANEAR PRENDAS"
             android:textColor="@color/colorPrimary"/>
 
-
-
-
     </LinearLayout>
-
 
 </ScrollView>

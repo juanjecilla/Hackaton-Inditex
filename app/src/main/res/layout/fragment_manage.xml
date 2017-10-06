@@ -1,78 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
-        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingTop="30px"
-    tools:context="com.monoloco.zaraqueue.ManageActivityFragment">
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="30dp">
-
-
-        <TextView
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Clientes en llamada"
-            android:textStyle="bold"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="16sp"/>
+            android:layout_height="match_parent"
+            android:paddingTop="30px"
+            tools:context="com.monoloco.zaraqueue.ManageActivityFragment">
 
-        //Cola llamada
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="30dp">
 
-        <include layout="@layout/clientcalllist_item" />
-        <include layout="@layout/clientcalllist_item" />
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:columnCount="5">
 
+                    <TextView
+                        android:id="@+id/cabin01"
+                        android:layout_width="@dimen/circle"
+                        android:layout_height="@dimen/circle"
+                        android:background="@drawable/circle"
+                        android:gravity="center"
+                        android:layout_margin="10dp"
+                        android:text="01"
+                        android:textColor="@color/colorPrimary"/>
 
-        <View
-            android:layout_width="40dp"
-            android:layout_height="1dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="40dp"
-            android:background="@color/colorPrimaryDark"
-            />
+                    <TextView
+                        android:id="@+id/cabin02"
+                        android:layout_width="@dimen/circle"
+                        android:layout_height="@dimen/circle"
+                        android:background="@drawable/circle"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="02"
+                        android:textColor="@color/colorPrimary"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+                    <TextView
+                        android:id="@+id/cabin03"
+                        android:layout_width="@dimen/circle"
+                        android:layout_height="@dimen/circle"
+                        android:background="@drawable/circle"
+                        android:gravity="center"
+                        android:text="03"
+                        android:textColor="@color/colorPrimary"/>
 
-            android:text="Clientes en espera"
-            android:textStyle="bold"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="16sp"/>
+                    <TextView
+                        android:id="@+id/cabin04"
+                        android:layout_width="@dimen/circle"
+                        android:layout_height="@dimen/circle"
+                        android:background="@drawable/circle"
+                        android:gravity="center"
+                        android:text="03"
+                        android:textColor="@color/colorPrimary"/>
 
+                    <TextView
+                        android:id="@+id/cabin05"
+                        android:layout_width="@dimen/circle"
+                        android:layout_height="@dimen/circle"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:gravity="center"
+                        android:text="04"
+                        android:textColor="@color/colorPrimary"/>
 
+                </GridLayout>
 
-        //Cola en espera
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Clientes en llamada"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"/>
 
-        <include layout="@layout/clientlist_item" />
-        <include layout="@layout/clientlist_item" />
+                <include layout="@layout/clientcalllist_item" />
 
+                <include layout="@layout/clientcalllist_item" />
 
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="@color/colorPrimaryDark"/>
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Clientes en espera"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"/>
 
+                <include layout="@layout/clientlist_item" />
 
+                <include layout="@layout/clientlist_item" />
 
+            </LinearLayout>
 
-    </LinearLayout>
+        </ScrollView>
 
-
-</ScrollView>
         <LinearLayout
             android:id="@+id/cabinmanager"
             android:visibility="gone"
@@ -104,9 +145,8 @@
                 android:gravity="center_horizontal"
                 android:text="Zara Woman"/>
 
-
-            //Grid de probadores
             <include layout="@layout/cabingrid_item"/>
+
             <TextView
                 android:id="@+id/cabinstatus"
                 android:layout_width="match_parent"
@@ -117,15 +157,16 @@
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="16sp"/>
+
             <TextView
                 android:id="@+id/queuetime"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="00:00:00"
-
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="16sp"/>
+
             <TextView
                 android:id="@+id/explanation"
                 android:layout_width="match_parent"
@@ -133,11 +174,10 @@
                 android:gravity="center_horizontal"
                 android:text="Tiempo previsto de espera"/>
 
-
-
-
         </LinearLayout>
+
     </FrameLayout>
+
     <LinearLayout
         android:id="@+id/bottombar"
         android:layout_width="match_parent"
@@ -192,4 +232,5 @@
 
 
     </LinearLayout>
+
 </LinearLayout>

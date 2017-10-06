@@ -2,8 +2,6 @@ package com.monoloco.zaraqueue.model;
 
 import java.util.ArrayList;
 
-import io.realm.RealmObject;
-
 /**
  * Created by root on 5/10/17.
  */
