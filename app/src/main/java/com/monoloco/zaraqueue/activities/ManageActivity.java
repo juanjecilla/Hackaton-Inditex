@@ -72,7 +72,8 @@ public class ManageActivity extends BaseActivity implements ChildEventListener, 
     }
 
     private void removeListeners() {
-        databaseReference.removeEventListener(this);
+        if (databaseReference != null)
+            databaseReference.removeEventListener(this);
     }
 
     private void initializeQueue(){

@@ -26,18 +26,44 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="30dp">
+                    android:padding="16dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="Clientes en llamada"
+                        android:layout_marginTop="0dp"
+                        android:text="Queue Manager"
+                        android:gravity="center_horizontal"
                         android:textStyle="bold"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="16sp"/>
 
-                    <include layout="@layout/clientcalllist_item" />
+                    <TextView
+                        android:id="@id/queuetime" android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="13min"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="49sp"/>
+
+                    <View
+                        android:layout_width="60dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginBottom="40dp"
+                        android:background="@color/colorPrimaryDark"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="LLAMANDO"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp"/>
+
+
 
                     <include layout="@layout/clientcalllist_item" />
 
@@ -51,12 +77,12 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Clientes en espera"
+                        android:text="EN ESPERA"
                         android:textStyle="bold"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="16sp"/>
 
-                    <include layout="@layout/clientlist_item" />
+
 
                     <include layout="@layout/clientlist_item" />
 
@@ -70,15 +96,36 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
+                android:padding="16dp"
                 android:background="@color/colorPrimary">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="0dp"
                     android:layout_marginTop="10dp"
+                    android:text="Queue Manager"
                     android:gravity="center_horizontal"
-                    android:text="Zara Queue"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"/>
+
+                <FrameLayout
+                    android:id="@+id/clothesitem01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginTop="30dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:orientation="vertical">
+                    <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginTop="0dp"
+                    android:text="PROBADORES"
                     android:textStyle="bold"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="16sp" />
@@ -86,16 +133,23 @@
                     android:id="@+id/storeaddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
                     android:text="CALLE PRECIADOS, 18"
                     android:textColor="@color/colorPrimaryDark"/>
                 <TextView
                     android:id="@+id/storesection"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
                     android:text="Zara Woman"/>
+                </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="Actualizar"
+                        android:textSize="12sp"/>
+                </FrameLayout>
 
+                //Grid
                 <include layout="@layout/cabingrid_item"/>
 
                 <TextView
@@ -114,7 +168,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="00:00:00"
+                    android:text="08min"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="16sp"/>
 
@@ -132,7 +186,7 @@
         <LinearLayout
             android:id="@+id/bottombar"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="110dp"
             android:layout_weight="1"
             android:orientation="horizontal">
 
@@ -141,14 +195,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/ic_menu_02wallet"/>
+                android:src="@drawable/ic_menu_05"/>
 
             <ImageView
                 android:id="@+id/queuemanagerbutton"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/ic_menu_01products"/>
+                android:src="@drawable/ic_menu_06"/>
 
         </LinearLayout>
 

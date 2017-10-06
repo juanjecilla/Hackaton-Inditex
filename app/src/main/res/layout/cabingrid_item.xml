@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:columnCount="5"
+        android:columnCount="4"
         android:layout_marginTop="20dp">
 
         <TextView
@@ -62,6 +62,7 @@
             android:layout_margin="@dimen/space"
             android:text="05"
             android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
             android:backgroundTint="@color/colorPrimaryDark" />
 
         <TextView
@@ -83,6 +84,7 @@
             android:layout_margin="@dimen/space"
             android:text="07"
             android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
             android:backgroundTint="@color/colorPrimaryDark"/>
 
         <TextView
@@ -104,6 +106,7 @@
             android:layout_margin="@dimen/space"
             android:text="09"
             android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
             android:backgroundTint="@color/colorPrimaryDark"/>
 
         <TextView
