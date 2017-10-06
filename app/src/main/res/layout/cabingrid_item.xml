@@ -17,6 +17,7 @@
             android:layout_width="@dimen/circle"
             android:layout_height="@dimen/circle"
             android:background="@drawable/circle"
+            android:backgroundTint="#5a5a5a"
             android:gravity="center"
             android:layout_margin="@dimen/space"
             android:text="01"
@@ -38,6 +39,7 @@
             android:layout_width="@dimen/circle"
             android:layout_height="@dimen/circle"
             android:background="@drawable/circle"
+            android:backgroundTint="#c6c6c6"
             android:gravity="center"
             android:layout_margin="@dimen/space"
             android:text="03"
@@ -48,6 +50,7 @@
             android:layout_width="@dimen/circle"
             android:layout_height="@dimen/circle"
             android:background="@drawable/circle"
+            android:backgroundTint="#9b9b9b"
             android:gravity="center"
             android:layout_margin="@dimen/space"
             android:text="04"
@@ -62,7 +65,6 @@
             android:layout_margin="@dimen/space"
             android:text="05"
             android:textColor="@color/colorPrimary"
-            android:textStyle="bold"
             android:backgroundTint="@color/colorPrimaryDark" />
 
         <TextView
@@ -84,7 +86,6 @@
             android:layout_margin="@dimen/space"
             android:text="07"
             android:textColor="@color/colorPrimary"
-            android:textStyle="bold"
             android:backgroundTint="@color/colorPrimaryDark"/>
 
         <TextView
@@ -92,9 +93,11 @@
             android:layout_width="@dimen/circle"
             android:layout_height="@dimen/circle"
             android:background="@drawable/circle"
+            android:backgroundTint="@color/colorAccent"
             android:gravity="center"
             android:layout_margin="@dimen/space"
             android:text="08"
+            android:textStyle="bold"
             android:textColor="@color/colorPrimary"/>
 
         <TextView
@@ -106,7 +109,6 @@
             android:layout_margin="@dimen/space"
             android:text="09"
             android:textColor="@color/colorPrimary"
-            android:textStyle="bold"
             android:backgroundTint="@color/colorPrimaryDark"/>
 
         <TextView
@@ -114,6 +116,7 @@
             android:layout_width="@dimen/circle"
             android:layout_height="@dimen/circle"
             android:background="@drawable/circle"
+            android:backgroundTint="#9b9b9b"
             android:gravity="center"
             android:layout_margin="@dimen/space"
             android:text="10"
@@ -134,6 +137,7 @@
             android:layout_width="@dimen/circle"
             android:layout_height="@dimen/circle"
             android:background="@drawable/circle"
+            android:backgroundTint="#9b9b9b"
             android:gravity="center"
             android:layout_margin="@dimen/space"
             android:text="12"
@@ -144,6 +148,7 @@
             android:layout_width="@dimen/circle"
             android:layout_height="@dimen/circle"
             android:background="@drawable/circle"
+            android:backgroundTint="#c6c6c6"
             android:gravity="center"
             android:layout_margin="@dimen/space"
             android:text="13"
@@ -164,6 +169,7 @@
             android:layout_width="@dimen/circle"
             android:layout_height="@dimen/circle"
             android:background="@drawable/circle"
+            android:backgroundTint="#7a7a7a"
             android:gravity="center"
             android:layout_margin="@dimen/space"
             android:text="15"
@@ -194,6 +200,7 @@
             android:layout_width="@dimen/circle"
             android:layout_height="@dimen/circle"
             android:background="@drawable/circle"
+            android:backgroundTint="#9b9b9b"
             android:gravity="center"
             android:layout_margin="@dimen/space"
             android:text="18"
