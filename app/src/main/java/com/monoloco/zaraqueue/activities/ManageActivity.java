@@ -3,6 +3,7 @@ package com.monoloco.zaraqueue.activities;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentTransaction;
+import android.text.LoginFilter;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -96,7 +97,9 @@ public class ManageActivity extends BaseActivity implements ChildEventListener, 
             QueueUser queueUser = dataSnapshot.getValue(QueueUser.class);
 
             if (queueUser.getValid() == 0){
-                pendingList.add(queueUser);
+                if (!pendingList.contains(queueUser)){
+                    pendingList.add(queueUser);
+                }
             }
 
             manageItem();
@@ -140,8 +143,9 @@ public class ManageActivity extends BaseActivity implements ChildEventListener, 
         idle = true;
         pendingList.remove(0);
 
-        if (pendingList.size() > 0){
-            launchNewClientFragment(pendingList.get(0));
+        if (getSupportFragmentManager().getBackStackEntryCount()>0){
+            getSupportFragmentManager().popBackStack();
+            manageItem();
         }
     }
 

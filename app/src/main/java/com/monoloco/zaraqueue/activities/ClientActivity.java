@@ -164,7 +164,7 @@ public class ClientActivity extends BaseActivity implements OnQueueUpdatedListen
         int minutes = seconds / 60;
         seconds = seconds % 60;
 
-        queueTime.setText(String.format("%02d:%02d", minutes, seconds));
+        queueTime.setText(minutes + " min");
     }
 
     @Override

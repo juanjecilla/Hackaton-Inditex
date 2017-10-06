@@ -14,6 +14,8 @@ import android.widget.Toast;
 import com.google.firebase.database.FirebaseDatabase;
 import com.monoloco.zaraqueue.R;
 import com.monoloco.zaraqueue.base.BaseFragment;
+import com.monoloco.zaraqueue.interfaces.OnNewClientListener;
+import com.monoloco.zaraqueue.interfaces.OnQueueUpdatedListener;
 import com.monoloco.zaraqueue.model.Clothes;
 import com.monoloco.zaraqueue.model.QueueUser;
 
@@ -107,6 +109,9 @@ public class NewClientFragment extends BaseFragment {
             queueUser.setValid(1);
             FirebaseDatabase.getInstance().getReference().child("queues").child("QUEUE_1").child(queueUser.getUid()).setValue(queueUser);
             userStatus.setText("El usuario está en la cola");
+            addToQueue.setText("Finalizar");
+        } else {
+            ((OnNewClientListener)getContext()).onNewClientManaged();
         }
     }
 
