@@ -22,62 +22,6 @@
                 android:orientation="vertical"
                 android:padding="30dp">
 
-                <GridLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:columnCount="5">
-
-                    <TextView
-                        android:id="@+id/cabin01"
-                        android:layout_width="@dimen/circle"
-                        android:layout_height="@dimen/circle"
-                        android:background="@drawable/circle"
-                        android:gravity="center"
-                        android:layout_margin="10dp"
-                        android:text="01"
-                        android:textColor="@color/colorPrimary"/>
-
-                    <TextView
-                        android:id="@+id/cabin02"
-                        android:layout_width="@dimen/circle"
-                        android:layout_height="@dimen/circle"
-                        android:background="@drawable/circle"
-                        android:gravity="center"
-                        android:padding="10dp"
-                        android:text="02"
-                        android:textColor="@color/colorPrimary"/>
-
-                    <TextView
-                        android:id="@+id/cabin03"
-                        android:layout_width="@dimen/circle"
-                        android:layout_height="@dimen/circle"
-                        android:background="@drawable/circle"
-                        android:gravity="center"
-                        android:text="03"
-                        android:textColor="@color/colorPrimary"/>
-
-                    <TextView
-                        android:id="@+id/cabin04"
-                        android:layout_width="@dimen/circle"
-                        android:layout_height="@dimen/circle"
-                        android:background="@drawable/circle"
-                        android:gravity="center"
-                        android:text="03"
-                        android:textColor="@color/colorPrimary"/>
-
-                    <TextView
-                        android:id="@+id/cabin05"
-                        android:layout_width="@dimen/circle"
-                        android:layout_height="@dimen/circle"
-                        android:background="@drawable/circle"
-                        android:backgroundTint="@color/colorPrimaryDark"
-                        android:gravity="center"
-                        android:text="04"
-                        android:textColor="@color/colorPrimary"/>
-
-                </GridLayout>
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -86,8 +30,6 @@
                     android:textStyle="bold"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="16sp"/>
-
-                <include layout="@layout/clientcalllist_item" />
 
                 <include layout="@layout/clientcalllist_item" />
 
