@@ -62,7 +62,9 @@
                 android:text="6 prendas • 8 min"
                 android:textSize="12sp" />
         </LinearLayout>
+
     </FrameLayout>
+
     <FrameLayout
         android:id="@+id/clothesitem01"
         android:layout_width="match_parent"

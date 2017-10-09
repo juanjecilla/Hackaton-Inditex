@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <FrameLayout
         android:id="@+id/clothesitem01"
         android:layout_width="match_parent"
@@ -10,7 +11,7 @@
         android:layout_marginTop="20dp">
 
         <TextView
-            android:id="@+id/usercode"
+            android:id="@+id/usercode1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="top|right"
@@ -19,7 +20,7 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/timer"
+            android:id="@+id/timer1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|right"
@@ -27,7 +28,6 @@
             android:text="02:23"
             android:textColor="@color/colorAccent"
             android:textStyle="bold"/>
-
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/queueorder"
+                android:id="@+id/queueorder1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -47,7 +47,7 @@
                 android:textSize="12sp" />
 
             <TextView
-                android:id="@+id/username"
+                android:id="@+id/username1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="LUCIA"
@@ -55,15 +55,17 @@
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimaryDark"/>
 
-
             <TextView
-                android:id="@+id/useritemsplustime"
+                android:id="@+id/useritemsplustime1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3 prendas • 8 min"
                 android:textSize="12sp" />
+
         </LinearLayout>
+
     </FrameLayout>
+
     <FrameLayout
         android:id="@+id/clothesitem02"
         android:layout_width="match_parent"
@@ -72,7 +74,7 @@
         android:layout_marginTop="20dp">
 
         <TextView
-            android:id="@+id/usercode"
+            android:id="@+id/usercode2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="top|right"
@@ -81,7 +83,7 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/timer"
+            android:id="@+id/timer2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|right"
@@ -89,7 +91,6 @@
             android:text="03:31"
             android:textColor="@color/colorAccent"
             android:textStyle="bold"/>
-
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -99,7 +100,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/queueorder"
+                android:id="@+id/queueorder2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -109,7 +110,7 @@
                 android:textSize="12sp" />
 
             <TextView
-                android:id="@+id/username"
+                android:id="@+id/username2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="CRISTINA"
@@ -117,24 +118,26 @@
                 android:textSize="14sp"
                 android:textColor="@color/colorPrimaryDark"/>
 
-
             <TextView
-                android:id="@+id/useritemsplustime"
+                android:id="@+id/useritemsplustime2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="6 prendas • 16 min"
                 android:textSize="12sp" />
+
         </LinearLayout>
+
     </FrameLayout>
+
     <FrameLayout
-        android:id="@+id/clothesitem01"
+        android:id="@+id/clothesitem03"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="top"
         android:layout_marginTop="20dp">
 
         <TextView
-            android:id="@+id/usercode"
+            android:id="@+id/usercode3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="top|right"
@@ -143,7 +146,7 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/timer"
+            android:id="@+id/timer3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|right"
@@ -151,7 +154,6 @@
             android:text="04:59"
             android:textColor="@color/colorAccent"
             android:textStyle="bold"/>
-
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -161,7 +163,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/queueorder"
+                android:id="@+id/queueorder3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -171,7 +173,7 @@
                 android:textSize="12sp" />
 
             <TextView
-                android:id="@+id/username"
+                android:id="@+id/username3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="NATALIA"
@@ -179,15 +181,15 @@
                 android:textSize="14sp"
                 android:textColor="@color/colorPrimaryDark"/>
 
-
             <TextView
-                android:id="@+id/useritemsplustime"
+                android:id="@+id/useritemsplustime3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2 prendas • 5 min"
                 android:textSize="12sp" />
-        </LinearLayout>
-    </FrameLayout>
 
+        </LinearLayout>
+
+    </FrameLayout>
 
 </LinearLayout>

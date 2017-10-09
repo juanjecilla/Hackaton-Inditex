@@ -172,4 +172,12 @@ public class FirebaseManager implements ChildEventListener {
         }
     };
 
+
+    public void setReady(String queue_1, QueueUser queueUser) {
+        if (databaseReference == null){
+            databaseReference = FirebaseDatabase.getInstance().getReference().child("queues").child(queue_1);
+        }
+        databaseReference.child(preferencesManager.getUserToken()).setValue(queueUser);
+        preferencesManager.setIsInQueue(false);
+    }
 }

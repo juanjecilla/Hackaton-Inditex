@@ -7,6 +7,7 @@ import com.monoloco.zaraqueue.activities.ClientActivity;
 import com.monoloco.zaraqueue.activities.ManageActivity;
 import com.monoloco.zaraqueue.firebase.FirebaseManager;
 import com.monoloco.zaraqueue.fragments.NewClientFragment;
+import com.monoloco.zaraqueue.fragments.NewConfirmFragment;
 import com.monoloco.zaraqueue.model.Queue;
 import com.monoloco.zaraqueue.model.QueueUser;
 import com.monoloco.zaraqueue.preferences.PreferencesManager;
@@ -40,6 +41,7 @@ import io.realm.Realm;
 
                         // Fragment
                         NewClientFragment.class,
+                        NewConfirmFragment.class,
 
                 },
         library = true,

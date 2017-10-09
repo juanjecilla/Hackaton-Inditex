@@ -17,6 +17,7 @@ import com.monoloco.zaraqueue.base.BaseActivity;
 import com.monoloco.zaraqueue.firebase.FirebaseManager;
 import com.monoloco.zaraqueue.interfaces.OnQueueUpdatedListener;
 import com.monoloco.zaraqueue.model.Clothes;
+import com.monoloco.zaraqueue.model.Queue;
 import com.monoloco.zaraqueue.model.QueueUser;
 import com.monoloco.zaraqueue.preferences.PreferencesManager;
 import com.monoloco.zaraqueue.utils.Constants;
@@ -129,7 +130,10 @@ public class ClientActivity extends BaseActivity implements OnQueueUpdatedListen
             if (!preferencesManager.getIsInQueue()){
                 firebaseManager.pushUserToQueue("QUEUE_1", queueUser);
             } else {
-                firebaseManager.popUserFromQueue("QUEUE_1", queueUser);
+                queueUser.setReady(1);
+                queueUser.setValid(1);
+                firebaseManager.setReady("QUEUE_1", queueUser);
+                //firebaseManager.popUserFromQueue("QUEUE_1", queueUser);
             }
 
             finish();
