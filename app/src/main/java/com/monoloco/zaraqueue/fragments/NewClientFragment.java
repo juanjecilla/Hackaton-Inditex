@@ -9,13 +9,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.database.FirebaseDatabase;
 import com.monoloco.zaraqueue.R;
 import com.monoloco.zaraqueue.base.BaseFragment;
 import com.monoloco.zaraqueue.interfaces.OnNewClientListener;
-import com.monoloco.zaraqueue.interfaces.OnQueueUpdatedListener;
 import com.monoloco.zaraqueue.model.Clothes;
 import com.monoloco.zaraqueue.model.QueueUser;
 

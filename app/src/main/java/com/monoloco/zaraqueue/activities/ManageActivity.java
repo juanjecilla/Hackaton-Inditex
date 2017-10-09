@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentTransaction;
-import android.text.LoginFilter;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;

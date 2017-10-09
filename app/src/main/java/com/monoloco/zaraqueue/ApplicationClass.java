@@ -27,12 +27,6 @@ public class ApplicationClass extends Application {
 
         // Configure the graph for dagger
         objectGraph = ObjectGraph.create(getModules().toArray());
-
-/*        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("fonts/Raleway-Regular.ttf")
-                .setFontAttrId(R.attr.fontPath)
-                .build()
-        );*/
     }
 
     @Override

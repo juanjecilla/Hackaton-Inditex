@@ -113,7 +113,7 @@ public class FirebaseManager implements ChildEventListener {
 
     @Override
     public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-        Log.d("HOLA_C", String.valueOf(dataSnapshot.getValue()));
+        Log.d("CHILD_C", String.valueOf(dataSnapshot.getValue()));
     }
 
     @Override

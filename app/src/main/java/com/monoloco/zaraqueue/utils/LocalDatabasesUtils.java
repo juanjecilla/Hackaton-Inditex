@@ -20,14 +20,7 @@ public class LocalDatabasesUtils extends BaseUtils {
     public void updateQueue(){
 
     }
-
-
     private void chechQueueState(){
 
     }
-
-/*    public Queue getQueue() {
-        Queue queue = realm.where(Queue.class).findFirst();
-        return queue;
-    }*/
 }

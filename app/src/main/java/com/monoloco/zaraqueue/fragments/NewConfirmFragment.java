@@ -2,7 +2,6 @@ package com.monoloco.zaraqueue.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +14,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.monoloco.zaraqueue.R;
 import com.monoloco.zaraqueue.base.BaseFragment;
 import com.monoloco.zaraqueue.interfaces.OnNewClientListener;
-import com.monoloco.zaraqueue.interfaces.OnNewConfirmListener;
 import com.monoloco.zaraqueue.model.Clothes;
 import com.monoloco.zaraqueue.model.QueueUser;
 
